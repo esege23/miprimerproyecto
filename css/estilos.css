@@ -1,0 +1,330 @@
+/* Estilos Index*/
+
+.headerInicio{
+    background-image: linear-gradient(90deg, rgba(63,251,126,0.9528186274509804) 1%, rgba(70,252,219,1) 100%);
+    width: 100%;
+    height: 200px;
+}
+.logoInicio{
+    margin-top: 30px;
+    animation-name: logo;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+.spanInicio{
+    color: rgb(74, 114, 84);
+    background: fixed;
+
+}
+.navInicio{
+    margin-top: 130px;
+    background: fixed;
+    color: rgb(74, 114, 84);
+    animation-name: menu;
+    animation-duration: 3s;
+}
+
+.banner{
+    position: relative;
+    margin-top: 40px;
+    object-fit: cover;
+}
+
+/*Estilo del Contenido*/
+
+.bodyInicio{
+    margin: 0;
+    background: rgb(63,251,126);
+    background: linear-gradient(90deg, rgba(63,251,126,0.9528186274509804) 1%, rgba(70,252,219,1) 100%);
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+}
+/*Grid Explicito*/
+
+.gridContainer {
+    display: grid;
+    width: 100%;
+    height: 1000px;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: repeat(3,100px);
+    gap: 100px;
+    margin-top: 50px;
+    background: rgb(63,251,126);
+    background: linear-gradient(90deg, rgba(63,251,126,0.9528186274509804) 1%, rgba(70,252,219,1) 100%);
+    padding-left: 130px;
+    justify-content: center;
+}
+.articlePadeleando{
+    grid-column: 1 / span 3;
+    justify-items: center;
+}
+.nuestrasMarcas{
+    grid-column: 1 / span 3;
+    justify-items: center;
+}
+.wilson{
+    align-items: center;
+}
+.head{
+    align-items: center;
+}
+.varlion{
+    align-items: center;
+}
+.noticias{
+    grid-column: 1 / span 3;
+    justify-items: center;
+    margin-top: 150px;
+    row-gap: 10px;
+    padding-left: 0%;
+}
+h2{
+    font-size: 35px;
+    padding-bottom: 15px;
+    color: rgb(28, 28, 209)
+}
+p{
+    color: rgb(74, 114, 84);
+    font-style: italic;
+    font-weight: bold;
+}
+h3{
+  color: red;
+  text-decoration:underline;
+  padding-bottom: 20px;  
+}
+.tituloInicio{
+    margin-top: 30px;
+    font-size: 70px;
+    color: rgb(74, 114, 84);
+    animation-name: padeleando;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+/*********Animaciones**************/
+
+/*Linea de Tiempo*/
+@keyframes padeleando  {
+    from {
+        transform: translateX(500px);
+        opacity: 0;
+        }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+        
+}
+@keyframes menu{
+    from {
+        transform: translateX(500px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes logo{
+    0% {
+        transform: translateY(-200px)
+    }
+
+    100% {
+        transform: translateY(0);
+
+    }
+
+}
+
+/*Estilos Pie de Pagina*/
+
+.footerInicio{
+    display: grid;
+    margin-top: 200px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    background-color: black;
+    color: yellowgreen;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+
+}
+/*Estilos Productos y Servicios*/
+
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family:'Signika', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vw;
+    background-image: linear-gradient(90deg, rgba(63,251,126,0.9528186274509804) 1%, rgba(70,252,219,1) 100%);
+    
+}
+
+.border{
+    border: solid 1px;
+    
+}
+
+span{
+    background-color: white; 
+    margin: 5px;
+    padding: 5px 25px;
+}
+span:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+#servicios, #productos, aside, footer{
+    padding: 10px;
+    background-color: white
+}
+nav {
+    padding: 10px;
+    background-color: white
+}
+
+#gridarea{
+    display: grid;
+
+    grid-template-areas:
+  
+    "menu cabeza cabeza"
+    "menu productos lateral"
+    "menu servicios lateral"
+    "menu pie pie";
+    grid-template-columns: 10% auto 15%;
+    grid-template-rows: 1fr 3fr 3fr 0.3fr;
+}
+
+header{
+    grid-area: cabeza;
+    background-image: linear-gradient(90deg, rgba(63,251,126,0.9528186274509804) 1%, rgba(70,252,219,1) 100%);
+    display: flex;
+    justify-content: center
+
+}
+footer{
+    grid-area: pie ;
+      background-color: black;
+        color: yellowgreen;
+        width: 100%;
+        height: 50px;
+        text-align: center;
+
+}
+#productos{
+    grid-area: productos;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+#servicios{
+    grid-area: servicios;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+#publicidad{
+    display: flex;
+}
+
+nav{
+    grid-area: menu;
+    display: flex;
+    flex-flow: row;
+    background:fixed;
+    position: absolute;
+    margin-top: 120px;   
+    padding: 8px;
+    animation-name: menu;
+    animation-duration: 3s;
+
+}
+nav a{
+    color: rgb(74, 114, 84);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+nav a:hover {
+    color: rgb(28, 28, 209)
+
+}
+aside{
+    grid-area: lateral;
+    background-color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.logo{
+   background: fixed;
+   padding: 15px;
+   animation-name: padeleando;
+   animation-duration: 3s;
+   animation-iteration-count: infinite;
+}
+h1{
+    font-size: 70px;
+    font-style: italic;
+    color:white;
+    margin: 30px;
+    animation-name: padeleando;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+span{
+    background: fixed;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+article{
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+     
+}
+h3{
+    font-style: italic;
+}
+
+/*Linea de Tiempo*/
+@keyframes padeleando  {
+    from {
+        transform: translateX(500px);
+        opacity: 0;
+        }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+        
+}
+@keyframes menu{
+    from {
+        transform: translateX(500px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes logo{
+    0% {
+        transform: translateY(-200px)
+    }
+
+    100% {
+        transform: translateY(0);
+
+    }
+
+}
